@@ -29,6 +29,6 @@ public class ConstructorReference {
 		};
 		
 			msg2.getMessage(str2);
-        System.out.println("Value");
+       
     }  
 }  
