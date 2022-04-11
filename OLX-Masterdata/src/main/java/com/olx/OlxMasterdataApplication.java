@@ -2,6 +2,7 @@ package com.olx;
 
 import java.util.ArrayList;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +23,11 @@ public class OlxMasterdataApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OlxMasterdataApplication.class, args);
 	}
+	@Bean
+	public ModelMapper getModelMapper() {
+		return new ModelMapper();
+	}
+	
 	@Bean
 	public Docket getCustomizedDocket() {
 		return new Docket(DocumentationType.SWAGGER_2)
